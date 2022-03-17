@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Corrida {
 
-    public static Corredor participantSubscription(Scanner scanner, HashMap<Integer, Corredor> list) {
+    public static Corredor inscricaoCorredor(Scanner scanner, HashMap<Integer, Corredor> list) {
         System.out.println("Informe o RG: ");
         String rg = scanner.next();
         System.out.println("Informe o nome: ");
@@ -36,7 +36,7 @@ public class Corrida {
             while (var11.hasNext()) {
                 Map.Entry<Integer, Corredor> entry = (Map.Entry) var11.next();
                 if (((Corredor) entry.getValue()).getRg().equals(rg)) {
-                    System.out.println("O participante só pode se inscrever uma única vez em um único circuito!");
+                    System.out.println("O Corredor só pode se inscrever uma única vez em um único circuito!");
                     check = true;
                 }
             }
@@ -83,7 +83,7 @@ public class Corrida {
     }
 
     public static void listingCorredores(Scanner scanner, HashMap<Integer, Corredor> list) {
-        System.out.println("Escolha a categoria de participantes cadastradas que você quer olhar: ");
+        System.out.println("Escolha a categoria de corredores cadastradas que você quer olhar: ");
         System.out.println("1 - Circuito pequeno: 2km pela selva e riachos.");
         System.out.println("2 - Circuito médio: 5km pela selva, riachos e lama.");
         System.out.println("3 - Circuito avançado: 10km pela selva, riachos, lama e escalada.");
@@ -134,9 +134,9 @@ public class Corrida {
 
         do {
             System.out.println("------------ MENU ------------");
-            System.out.println("1 - Inscrever um participante;");
-            System.out.println("2 - Mostrar todos participantes inscritos;");
-            System.out.println("3 - Cancelar a incricao de um participante;");
+            System.out.println("1 - Inscrever um corredores;");
+            System.out.println("2 - Mostrar todos corredores inscritos;");
+            System.out.println("3 - Cancelar a incricao de um corredores;");
             System.out.println("0 - Sair");
             System.out.println("------------------------------");
             System.out.println("Informe a sua opcao: ");
@@ -146,7 +146,7 @@ public class Corrida {
                     System.out.println("Programa encerrado. Até logo!");
                     break;
                 case 1:
-                    Corredor corredor = participantSubscription(scanner, corredorList);
+                    Corredor corredor = inscricaoCorredor(scanner, corredorList);
                     if (corredor != null) {
                         PrintStream var10000 = System.out;
                         String var10001 = corredor.getNome();
@@ -159,13 +159,13 @@ public class Corrida {
                     listingCorredores(scanner, corredorList);
                     break;
                 case 3:
-                    System.out.println("Informe o número de inscricao do participante que você deseja cancelar a participacao: ");
+                    System.out.println("Informe o número de inscricao do corredor que você deseja cancelar a participacao: ");
                     Integer key = scanner.nextInt();
                     Corredor removedParticipant = (Corredor) corredorList.remove(key);
                     if (removedParticipant != null) {
-                        System.out.println("Participante removido");
+                        System.out.println("Corredor removido");
                     } else {
-                        System.out.println("Participante nao encontrado ou ja foi removido.");
+                        System.out.println("Corredor nao encontrado ou ja foi removido.");
                     }
             }
         } while (menu != 0);
