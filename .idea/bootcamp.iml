@@ -10,7 +10,10 @@
       <sourceFolder url="file://$MODULE_DIR$/java-lll/pratica-integradora-1/exercicio1/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/java-lll/pratica-integradora-1/exercicio2/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/java-lll/pratica-integradora-1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/java-lV/pratica-integradora-1/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/java-lll/pratica-integradora-2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/spring-l/pratica-integradora-1/roman-numbers-api/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/spring-l/pratica-integradora-1/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
